@@ -14,7 +14,7 @@ Conquer PoC
     QVision.ClickText    Login with Salesforce
     ClickText            Email
     ClickText            New Template
-    TypeText             Name                        Test 1
+    TypeText             Name                        Test 2
     TypeText             Subject                     This is a test
     TypeText             Start typing to select profiles                      System Administrator
     HotKey               Enter
@@ -34,12 +34,12 @@ Conquer PoC
     ClickItem            fitview                     timeout=5
     UseModal             On
     DragDrop             Phone Call                  Enroll Cadence Member    below=250                   dragtime=5
-    ClickText            Email                       anchor=Step information is incomplete
+    ClickItem            fitview
+    ClickText            Step information is incomplete
     TypeText             Step name*                  Email Step              
     TypeText             Instructions*               You need to send this ASAP
     TypeText             Email Template              Test 1
     HotKey               Enter
     ClickText            Save                        anchor=Trace
-    ClickItem            fitview
     ClickText            Back to cadences
     ClickText            Yes
