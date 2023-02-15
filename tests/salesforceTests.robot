@@ -32,5 +32,5 @@ Conquer PoC
     HotKey               Enter
     ClickText            Next
     ClickText            Save
-    ClickText            fit view                    timeout=5
-    DragDrop             Email          Enroll Cadence Member       below=100    dragtime=9s
+    ClickItem            fit view                    timeout=5
+    DragDrop             Email                       Enroll Cadence Member      below=100                   dragtime=9s
