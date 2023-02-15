@@ -12,12 +12,11 @@ Library                  QVision
 Conquer PoC
     Login
     QVision.ClickText    Login with Salesforce
-    ClickItem            edit                        anchor=Some unique name
     ClickText            Email
     ClickText            New Template
     TypeText             Name                        Test 1
     TypeText             Subject                     This is a test
-    TypeText             Start typing to select profiles                        System Administrator
+    TypeText             Start typing to select profiles                      System Administrator
     HotKey               Enter
     HotKey               Tab
     WriteText            This is the subject line
@@ -28,9 +27,19 @@ Conquer PoC
     ClickText            Cadence Options
     TypeText             Select an option            Default
     HotKey               Enter
-    TypeText             Select an option            HVS Public Group           anchor=Public Group Assignments
+    TypeText             Select an option            HVS Public Group         anchor=Public Group Assignments
     HotKey               Enter
     ClickText            Next
     ClickText            Save
-    ClickItem            fit view                    timeout=5
-    DragDrop             Email                       Enroll Cadence Member      below=100                   dragtime=9s
+    ClickItem            fitview                     timeout=5
+    UseModal             On
+    DragDrop             Phone Call                  Enroll Cadence Member    below=250                   dragtime=5
+    ClickText            Email                       anchor=Step information is incomplete
+    TypeText             Step name*                  Email Step              
+    TypeText             Instructions*               You need to send this ASAP
+    TypeText             Email Template              Test 1
+    HotKey               Enter
+    ClickText            Save                        anchor=Trace
+    ClickItem            fitview
+    ClickText            Back to cadences
+    ClickText            Yes
