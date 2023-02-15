@@ -2,15 +2,18 @@
 # before running this suite.
 
 *** Settings ***
-Resource                      ../resources/common.robot
-Suite Setup                   Setup Browser
-Suite Teardown                End suite
+Resource                 ../resources/common.robot
+Suite Setup              Setup Browser
+Suite Teardown           End suite
+Library                  QVision
 
 
 *** Test Cases ***
 Conquer PoC
     Login
-    UseTable    Name
-    ClickText   Edit    anchor=Some unique name
-    ClickTableCell      c7    r4    
-    
+    QVision.ClickText    Login with Salesforce
+    SwitchWindow         NEW
+    CloseWindow
+    UseTable             Name
+    ClickIcon            edit                        anchor=
+    ClickTableCell       c7                          r4
