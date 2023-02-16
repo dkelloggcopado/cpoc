@@ -37,7 +37,8 @@ Conquer PoC
     ClickText            Next
     ClickText            Save
     ClickItem            fitview                     timeout=5
-    DragDrop             Emailbutton                 Enroll Cadence Member       below=250                   dragtime=5    anchor=Steps
+    SetConfig            ShadowDOM                   off
+    DragDrop             Email                       Enroll Cadence Member                            below=250    dragtime=5
     ClickItem            fitview
     ClickText            Step information is incomplete
     TypeText             Step name*                  Email Step
