@@ -24,7 +24,7 @@ Conquer PoC
     TypeText             Name                        ${email_name}
     TypeText             Subject                     This is a test
     TypeText             Start typing to select profiles                         System Administrator
-    HotKey               Ente
+    HotKey               Enter
     HotKey               Tab                         sleep=3
     WriteText            This is the subject line
     QVision.ClickText    Merge                       anchor=Font                 timeout=5
