@@ -6,6 +6,7 @@ Resource                 ../resources/common.robot
 Suite Setup              Setup Browser
 Suite Teardown           End suite
 Library                  FakerLibrary
+Library                  QVision
 
 
 *** Test Cases ***
