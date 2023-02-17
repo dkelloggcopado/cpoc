@@ -12,22 +12,23 @@ Library                  QVision
 *** Test Cases ***
 Conquer PoC
     ${email_name}=       FakerLibrary.Sentence       nb_words=5
+    ${mergefield}=       FakerLibrary.Text           max_nb_chars=10
     Login
     QVision.ClickText    Login with Salesforce
     ClickText            Email
     ClickText            New Template
     ClickText            New Merge Field
-    TypeText             New Merge Field             Test 1
+    TypeText             New Merge Field             ${mergefield}
     TypeText             Select Merge Field          First Name                  anchor=2
     HotKey               Enter
-    TypeText             Name                        Test 3
+    TypeText             Name                        ${email_name}
     TypeText             Subject                     This is a test
     TypeText             Start typing to select profiles                         System Administrator
-    HotKey               Enter
-    HotKey               Tab
+    HotKey               Ente
+    HotKey               Tab                         sleep=3
     WriteText            This is the subject line
     QVision.ClickText    Merge                       anchor=Font                 timeout=5
-    ClickText            ${email_name}               anchor=Font                 timeout=5
+    ClickText            ${mergefield}               anchor=Font                 timeout=5
     ClickText            Save
     ClickText            Cadences
     ClickText            Create Cadence
