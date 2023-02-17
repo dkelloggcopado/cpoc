@@ -5,11 +5,12 @@
 Resource                 ../resources/common.robot
 Suite Setup              Setup Browser
 Suite Teardown           End suite
-Library                  QVision
+Library                  FakerLibrary
 
 
 *** Test Cases ***
 Conquer PoC
+    ${email_name}=       FakerLibrary.Sentence       nb_words=5
     Login
     QVision.ClickText    Login with Salesforce
     ClickText            Email
@@ -25,7 +26,7 @@ Conquer PoC
     HotKey               Tab
     WriteText            This is the subject line
     QVision.ClickText    Merge                       anchor=Font                 timeout=5
-    ClickText            Test 1                      anchor=Font                 timeout=5
+    ClickText            ${email_name}               anchor=Font                 timeout=5
     ClickText            Save
     ClickText            Cadences
     ClickText            Create Cadence
@@ -37,13 +38,15 @@ Conquer PoC
     ClickText            Next
     ClickText            Save
     ClickItem            fitview                     timeout=5
-    SetConfig            ShadowDOM                   off
-    DragDrop             Email                       Enroll Cadence Member                            below=250    dragtime=5
+    DragDrop             Email                       Enroll Cadence Member       below=250                   loc_above=40    dragtime=5    anchor=Steps
+    #DragDrop            Phone Call                  Enroll Cadence Member       below=250                   loc_above=70    dragtime=5    anchor=Steps
+    #DragDrop            Custom                      Enroll Cadence Member       below=250                   loc_above=80    dragtime=5    anchor=Wait
+    #DragDrop            Wait                        Enroll Cadence Member       below=250                   loc_above=80    dragtime=5
     ClickItem            fitview
     ClickText            Step information is incomplete
     TypeText             Step name*                  Email Step
     TypeText             Instructions*               You need to send this ASAP
-    TypeText             Email Template              Test 3
+    TypeText             Email Template              ${email_name}
     HotKey               Enter
     ClickText            Save                        anchor=Trace
     ClickText            Back to cadences
