@@ -54,3 +54,17 @@ Conquer PoC
     ClickText            Back to cadences
     ClickText            Yes
 
+Test 2
+    GoTo                 https://bamteamservices.com/healthcare3
+    ClickText            New Lead
+    TypeText             Company *                   Copado
+    TypeText             First Name *                Darren
+    TypeText             Last Name *                 Barren
+    TypeText             Your Email *                dbarren@test.com
+    Typetext             Mobile Phone *              5555555555
+    TypeText             Phone *                     5551234321
+    ClickCheckbox        Add to Cadence?             on
+    ClickCheckbox        Send SMS welcome?           on
+    ClickCheckbox        Add To Speed-To-Lead?       on
+
+
