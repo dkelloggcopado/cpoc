@@ -13,6 +13,6 @@ Library           QVision
 Lund Boats
     GoTo          https://www.lundboats.com/build/boat-configurator.Z1648.html
     SetConfig     LogMatchedIcons             True
-    VerifyIcon    lundboat                    
+    VerifyIcon    heritage                    template_res_w=50                    
 
 
