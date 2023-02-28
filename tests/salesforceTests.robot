@@ -13,6 +13,6 @@ Library           QVision
 Lund Boats
     GoTo          https://www.lundboats.com/build/boat-configurator.Z1648.html
     SetConfig     LogMatchedIcons             True
-    VerifyIcon    heritagered.png             timeout=7
+    VerifyIcon    lundboat.png             timeout=7
 
 
